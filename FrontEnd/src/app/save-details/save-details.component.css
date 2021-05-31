@@ -1,0 +1,25 @@
+
+.main{
+    width: 700px;
+    height: 650px;
+    margin-left: 21%;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    background-color: azure;
+    color: whitesmoke;
+    font-size: large
+
+}
+.heading{
+    width: 100%;
+    height: 40px;
+}
+b{
+    margin-left: 200px;
+}
+#text {
+   height:30px;
+   width: 300px;
+    border:0;
+    box-shadow:0 0 15px 4px rgba(209, 24, 24, 0.06);
+  }

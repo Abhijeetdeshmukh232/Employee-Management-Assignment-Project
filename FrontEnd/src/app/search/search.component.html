@@ -1,0 +1,56 @@
+
+  <form #user="ngForm"(ngSubmit)="onSubmit(user.value)">
+<div style="margin-top: 30px; margin-left: 70px;">
+  <label  style="margin-right: 20px;"><b>Search By:</b></label>
+  <select  id="searchBy" name="searchBy" ngModel>
+      
+    <option value="firstName" >FirstName</option>
+    <option value="lastName">LastName</option>
+    <option value="employeeID">EmployeeID</option>
+    <option value="city">City</option>
+  </select>
+  <label style="margin-left: 70px;margin-right: 20px;"><b>Search Option:</b></label>
+  <select id="searchOn" name="searchOn" ngModel>
+    <option value="likeMatch" >Like Match</option>
+    <option value="exactMatch">Exact Match</option>
+    <option value="notLikeMatch">Not Like Match</option>
+  </select>
+  <label style="margin-left: 70px;margin-right: 20px;"><b>Search Value:</b></label>
+  <input type="text" name="searchValue" id="searchValue" placeholder="Enter value to be searched"  style="margin-right: 20px;"ngModel>
+</div>
+<div>
+  <button type="submit" style="margin-left: 40%;margin-top: 20px;">Search</button>
+</div>
+<div>
+    <label type="label" style="margin-left: 35%;margin-top: 20px;color: red;">{{emptyResultText}}</label>
+  </div>
+</form>
+
+<div class="container mt-5">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Filter..." [(ngModel)]="filterTerm">
+  </div>
+
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Employee ID</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">City</th>
+        <th scope="col">Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of sorteddata | filter:filterTerm">
+        <td>{{data.id}}</td>
+        <td>{{data.firstName}}</td>
+        <td>{{data.lastName}}</td>
+        <td>{{data.city}}</td>
+        <td>{{data.email}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+

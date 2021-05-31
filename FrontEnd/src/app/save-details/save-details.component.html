@@ -1,0 +1,36 @@
+<form  #user="ngForm"(ngSubmit)="onSubmit(user.value)">
+    <div class="main bg-dark">
+        <div class="heading">
+            <h2><i><b>Employee Form</b></i></h2>
+        </div><hr style="height: 3px;">
+    <div style="margin-left: 20px;" class="form-group"> 
+        
+        <div class="rq" style="color: red;">* All Fields Are Mandatory</div><br>
+            <label>First Name</label>
+            <input type="text" name="firstName" id="text" placeholder="FirstName" style="margin-left: 10px;" ngModel>
+           <br><br>
+            <label>Last Name</label>
+            <input type="text" name="lastName" id="text" style="margin-left: 11px;" placeholder="LastName" ngModel><br><br>
+        </div>
+        <div style="margin-left: 20px;" class="form-group">
+            <label>Email</label>&nbsp;
+            <input type="email" name="email" id="text" style="margin-left: 43px;" placeholder="Email" ngModel>
+        </div><br>
+        <div style="margin-left: 20px;" class="form-group">
+            <label>PhoneNo</label>&nbsp;
+            <input type="text" name="phoneno" id="text" placeholder="Phone Number"style="margin-left: 10px;"ngModel>
+        </div><br>
+        <div style="margin-left: 20px;" class="form-group">
+            <label>Address</label>&nbsp;
+            <input type="text" name="streetaddress1" id="text" placeholder="Street Address 1" style="margin-left: 20px;" ngModel><br><br>
+            <input type="text" name="streetaddressline2" id="text" placeholder="Street Address 2" style="margin-left: 93px;" ngModel><br><br>
+            <input type="text" name="city" id="text" placeholder="City"style="margin-left: 93px;width: 100px;"ngModel>
+            <input type="text" name="state" id="text" placeholder="State"style="margin-left: 10px;width: 100px;"ngModel><br><br>
+            <input type="text" name="country" id="text" placeholder="Country"style="margin-left: 93px;width: 100px;"ngModel>
+            <input type="text" name="postalcode" id="text" placeholder="PostalCode"style="margin-left: 10px;width: 100px;"ngModel><br><br>
+            <button type="submit" class="btn btn-outline-success" style="margin-left: 40%;">Submit</button>
+        </div>
+        
+
+    </div>
+</form>
